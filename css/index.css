@@ -121,6 +121,49 @@ header > div:nth-of-type(2) {
     border-radius: 10px;
 }
 
+footer {
+    width: 100%;
+    color: white;
+    background-color: rgb(24, 24, 24);
+    padding: 50px 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+footer a {
+    color: rgb(223, 223, 223);
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
+}
+
+footer > div {
+    width: 100%;
+    max-width: 1300px;
+    display: flex;
+    gap: 30px;
+}
+
+footer > div > div:nth-of-type(1) {
+    width: calc(50% - 10px);
+}
+
+footer > div > div:nth-of-type(2), footer > div > div:nth-of-type(3) {
+    width: calc(25% - 10px);
+}
+
+footer > div > div > p {
+    color: rgb(223, 223, 223);
+    transition: all 0.2s ease-in-out;
+}
+
+footer > div > div a:hover{
+    color: rgb(156, 156, 156);
+    cursor: pointer;
+}
+
 @media only screen and (max-width: 1200px) {
     .card {
         display: flex;
@@ -132,6 +175,14 @@ header > div:nth-of-type(2) {
 @media only screen and (max-width: 1000px) {
     .list_of_codes {
         padding: 50px;
+    }
+
+    footer > div {
+        flex-direction: column;
+    }
+
+    footer > div > div:nth-of-type(1), footer > div > div:nth-of-type(2), footer > div > div:nth-of-type(3) {
+        width: 100%;
     }
 }
 
@@ -157,6 +208,10 @@ header > div:nth-of-type(2) {
 
     .list_of_codes {
         padding: 25px;
+    }
+
+    footer {
+        padding: 40px;
     }
 }
 
