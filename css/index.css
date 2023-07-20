@@ -16,20 +16,28 @@ header {
     padding: 50px 100px;
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+header > div {
+    width: 100%;
+    max-width: 1300px;
+    display: flex;
     gap: 50px;
 }
 
-header > div:nth-of-type(1) { 
+header > div > div:nth-of-type(1) { 
     width: calc(50% - 25px);
     display: flex;
     justify-content: center;
 }
 
-header > div:nth-of-type(1) > img { 
+header > div > div:nth-of-type(1) > img { 
     max-width: 250px;
 }
 
-header > div:nth-of-type(2) { 
+header > div> div:nth-of-type(2) { 
     width: calc(50% - 25px);
 }
 
@@ -188,16 +196,19 @@ footer > div > div a:hover{
 
 @media only screen and (max-width: 768px) {
     header {
+        padding: 50px;
+    }
+
+    header > div {
         flex-direction: column;
-        padding: 40px;
         text-align: center;
     }
 
-    header > div:nth-of-type(1) { 
+    header > div > div:nth-of-type(1) { 
         width: 100%;
     }
     
-    header > div:nth-of-type(2) { 
+    header > div > div:nth-of-type(2) { 
         width: 100%;
     }
 
@@ -211,7 +222,7 @@ footer > div > div a:hover{
     }
 
     footer {
-        padding: 40px;
+        padding: 50px;
     }
 }
 
