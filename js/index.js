@@ -3,10 +3,11 @@ timeAndDateInterval();
 setInterval(timeAndDateInterval, 1000);
 
 function timeAndDateInterval() {
-    var currentDate = new Date();
+    var currentLocalDate = new Date();
+    var currentUtcDate = new Date(currentLocalDate.getTime() + currentLocalDate.getTimezoneOffset() * 60000);
     var targetDate = new Date(document.getElementById('target_date').dateTime);
 
-    var timeDiff = Math.abs(targetDate - currentDate);
+    var timeDiff = Math.abs(targetDate - currentUtcDate);
 
     var seconds = Math.floor((timeDiff / 1000) % 60);
     var minutes = Math.floor((timeDiff / (1000 * 60)) % 60);
@@ -54,5 +55,5 @@ function showTimeAndDate() {
     var formattedTime = hours + ":" + minutes + ", " + month + " " + day + ", " + year;
 
     // Update the time display
-    document.getElementById("show_current_time_and_date").textContent = " | " + formattedTime + " (UTC+8)";
+    document.getElementById("show_current_time_and_date").textContent = " | " + formattedTime + " (UTC+0)";
 }
