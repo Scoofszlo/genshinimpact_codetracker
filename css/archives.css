@@ -81,23 +81,44 @@ header > div> div:nth-of-type(2) {
 }
 
 .button > button:nth-of-type(1) {
-    background-color: rgb(72, 72, 72);
-}
-
-.button > button:nth-of-type(2) {
     background-color: rgb(38, 38, 38);
 }
 
+.button > button:nth-of-type(2) {
+    background-color: rgb(72, 72, 72);
+}
+
 .button > button:nth-of-type(1):hover {
-    background-color: rgb(96, 96, 96);
+    background-color: rgb(62, 62, 62);
 }
 
 .button > button:nth-of-type(2):hover {
-    background-color: rgb(62, 62, 62);
+    background-color: rgb(96, 96, 96);
 }
 
 .list_of_codes > p > span:nth-of-type(2) {
     color: rgb(156, 156, 156);
+}
+
+table {
+    background-color: rgb(38, 38, 38);
+    text-align: center;
+    padding: 30px;
+    border-collapse: collapse;
+}
+
+table th {
+    font-weight: bold;
+    padding: 10px;
+    background-color: rgb(49, 49, 49);
+}
+
+table td {
+    padding: 30px;
+}
+
+table tr > td:nth-of-type(1) {
+    font-weight: bold;
 }
 
 .card_container {
@@ -220,6 +241,10 @@ footer > div > div a:hover{
         padding: 50px;
     }
 
+    table tr > *:nth-child(3), table tr > *:nth-child(4) {
+        display: none;
+    }
+
     footer > div {
         flex-direction: column;
     }
@@ -227,6 +252,8 @@ footer > div > div a:hover{
     footer > div > div:nth-of-type(1), footer > div > div:nth-of-type(2), footer > div > div:nth-of-type(3) {
         width: 100%;
     }
+
+
 }
 
 @media only screen and (max-width: 768px) {
@@ -281,5 +308,9 @@ footer > div > div a:hover{
 
     .button button {
         width: 100%;
+    }
+
+    table td {
+        padding: 10px;
     }
 }

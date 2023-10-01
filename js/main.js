@@ -57,3 +57,11 @@ function showTimeAndDate() {
     // Update the time display
     document.getElementById("show_current_time_and_date").textContent = " | " + formattedTime + " (UTC+0)";
 }
+
+document.getElementById("available").onclick = function() {
+    window.location.href = "index.html";
+}
+
+document.getElementById("archives").onclick = function() {
+    window.location.href = "archives.html";
+}
