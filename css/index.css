@@ -137,6 +137,8 @@ header > div> div:nth-of-type(2) {
 .reward_code {
     font-size: 30px;
     font-weight: bold;
+    width: 100%;
+    word-wrap: break-word;
 }
 
 .reward_code a {
