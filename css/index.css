@@ -152,20 +152,6 @@ header > div> div:nth-of-type(2) {
     color: rgb(126, 126, 126);
 }
 
-.reward_code_available { 
-    background-color: rgb(43, 89, 63);
-    color: white;
-    padding: 5px 15px;
-    border-radius: 10px;
-}
-
-.reward_code_expired { 
-    background-color: rgb(110, 54, 48);
-    color: white;
-    padding: 5px 15px;
-    border-radius: 10px;
-}
-
 footer {
     width: 100%;
     color: white;

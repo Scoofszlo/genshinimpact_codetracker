@@ -1,6 +1,39 @@
 showTimeAndDate();
 timeAndDateInterval();
+dynamicRewardStatusColor();
 setInterval(timeAndDateInterval, 1000);
+
+function dynamicRewardStatusColor() {
+    var dynamicSpan = document.querySelectorAll(".reward_code_status");
+
+    dynamicSpan.forEach(function(span) {
+        setColorBasedOnAvailability(span);
+    });
+
+    function setColorBasedOnAvailability(span) {
+        var content = span.textContent.toLowerCase();
+
+        switch (content) {
+            case "available":
+                span.style.backgroundColor = "rgb(43, 89, 63)";
+                span.style.color = "white";
+                span.style.padding = "5px 15px";
+                span.style.borderRadius = "10px";
+                break;
+            case "expired":
+                span.style.backgroundColor = "rgb(110, 54, 48)";
+                span.style.color = "white";
+                span.style.padding = "5px 15px";
+                span.style.borderRadius = "10px";
+                break;
+            default:
+                span.style.backgroundColor = "rgb(126, 126, 126)";
+                span.style.color = "white";
+                span.style.padding = "5px 15px";
+                span.style.borderRadius = "10px";
+        }
+    }
+}
 
 function timeAndDateInterval() {
     var currentLocalDate = new Date();
