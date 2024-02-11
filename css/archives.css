@@ -163,11 +163,13 @@ footer > div > div a:hover{
     cursor: pointer;
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1200px) {
     .list_of_codes {
         padding: 50px;
     }
+}
 
+@media only screen and (max-width: 1000px) {
     table tr > *:nth-child(3), table tr > *:nth-child(4) {
         display: none;
     }
@@ -179,8 +181,6 @@ footer > div > div a:hover{
     footer > div > div:nth-of-type(1), footer > div > div:nth-of-type(2), footer > div > div:nth-of-type(3) {
         width: 100%;
     }
-
-
 }
 
 @media only screen and (max-width: 768px) {
@@ -222,6 +222,10 @@ footer > div > div a:hover{
 
     .button button {
         width: 100%;
+    }
+
+    table tr > td:nth-of-type(1) {
+        word-break: break-all;
     }
 
     table td {
