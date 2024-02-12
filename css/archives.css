@@ -100,6 +100,10 @@ header > div> div:nth-of-type(2) {
     color: rgb(156, 156, 156);
 }
 
+.table_wrapper {
+    overflow-x: auto;
+}
+
 table {
     text-align: center;
     border-collapse: collapse;
@@ -173,8 +177,8 @@ footer > div > div a:hover{
 }
 
 @media only screen and (max-width: 1000px) {
-    table tr > *:nth-child(3), table tr > *:nth-child(4) {
-        display: none;
+    table td {
+        padding: 10px;
     }
 
     footer > div {
@@ -213,6 +217,10 @@ footer > div > div a:hover{
         padding: 25px;
     }
 
+    table tr > td:nth-of-type(1) {
+        word-break: break-all;
+    }
+
     footer {
         padding: 50px;
     }
@@ -225,10 +233,6 @@ footer > div > div a:hover{
 
     .button button {
         width: 100%;
-    }
-
-    table tr > td:nth-of-type(1) {
-        word-break: break-all;
     }
 
     table td {
