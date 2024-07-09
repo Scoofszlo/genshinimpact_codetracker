@@ -1,10 +1,10 @@
+dynamicRewardStatusColor();
 showTimeAndDate();
 timeAndDateInterval();
-dynamicRewardStatusColor();
 setInterval(timeAndDateInterval, 1000);
 
 function dynamicRewardStatusColor() {
-    var dynamicSpan = document.querySelectorAll(".reward_code_status");
+    var dynamicSpan = document.querySelectorAll(".bc_reward_code_status");
 
     dynamicSpan.forEach(function(span) {
         setColorBasedOnAvailability(span);
@@ -38,7 +38,7 @@ function dynamicRewardStatusColor() {
 function timeAndDateInterval() {
     var currentLocalDate = new Date();
     var currentUtcDate = new Date(currentLocalDate.getTime() + currentLocalDate.getTimezoneOffset() * 60000);
-    var targetDate = new Date(document.getElementById('target_date').dateTime);
+    var targetDate = new Date(document.getElementById('bc_target_date').dateTime);
 
     var timeDiff = Math.abs(targetDate - currentUtcDate);
 
@@ -68,11 +68,11 @@ function timeAndDateInterval() {
         timeInterval += seconds + 's ';
     }
 
-    document.getElementById('time_interval').textContent = timeInterval.trim() + " ago";
+    document.getElementById('bc_time_interval').textContent = timeInterval.trim() + " ago";
 }
 
 function showTimeAndDate() {
-    var targetDate = new Date(document.getElementById('target_date').dateTime);
+    var targetDate = new Date(document.getElementById('bc_target_date').dateTime);
     var hours = targetDate.getHours();
     var minutes = targetDate.getMinutes();
     var day = targetDate.getDate();
@@ -88,13 +88,21 @@ function showTimeAndDate() {
     var formattedTime = hours + ":" + minutes + ", " + month + " " + day + ", " + year;
 
     // Update the time display
-    document.getElementById("show_current_time_and_date").textContent = " | " + formattedTime + " (UTC+0)";
+    document.getElementById("bc_show_current_time_and_date").textContent = " | " + formattedTime + " (UTC+0)";
 }
 
-document.getElementById("available").onclick = function() {
+document.getElementById("bc_available_btn").onclick = function() {
     window.location.href = "index.html";
 }
 
-document.getElementById("archives").onclick = function() {
+document.getElementById("bc_archives_btn").onclick = function() {
     window.location.href = "archives.html";
+}
+
+document.getElementById("hc_genshin_impact_btn").onclick = function() {
+    window.location.href = "../genshin_impact/index.html";
+}
+
+document.getElementById("hc_zenless_zone_zero_btn").onclick = function() {
+    window.location.href = "index.html";
 }
