@@ -100,7 +100,7 @@
     transition: all 0.2s ease-in-out;
 }
 
-.bc_reward_code_wrapper > p > a:hover {
+.bc_reward_code_wrapper > a:hover {
     cursor: pointer;
     color: rgb(126, 126, 126);
 }
