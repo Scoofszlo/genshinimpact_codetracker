@@ -117,6 +117,7 @@
 .bc_reward_code_status_wrapper {
     width: calc(30% - 10px);
     display: flex;
+    justify-content: center;
     align-items: center;
 }
 
@@ -133,7 +134,9 @@
     }
 
     .bc_reward_code_status_wrapper {
+        width: 100%;
         margin-top: auto;
+        justify-content: unset;
     }
 }
 
