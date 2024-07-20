@@ -88,6 +88,15 @@ table, td {
     border: 1px solid rgb(49, 49, 49);
 }
 
+table a {
+    color: rgb(255, 255, 255);
+    transition: all 0.2s ease-in-out;
+}
+
+table a:hover {
+    color: rgb(126, 126, 126);
+}
+
 @media only screen and (max-width: 1000px) {
     table td {
         padding: 10px;
