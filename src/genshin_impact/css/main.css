@@ -61,6 +61,7 @@ header {
 
 .hc_btn_wrapper > button:hover {
     background-color: rgb(121, 121, 121);
+    cursor: pointer;
 }
 
 footer {
