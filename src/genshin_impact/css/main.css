@@ -9,6 +9,10 @@ body {
     font-family: "Arial";
 }
 
+ul {
+    padding-left: 20px;
+}
+
 header {
     display: flex;
     width: 100%;
